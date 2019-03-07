@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GifItem from './gif-Item';
+import './gif-Grid.css'
 
 class GifGrid extends Component {
 
@@ -8,7 +9,7 @@ class GifGrid extends Component {
     const { gifList } = this.props
 
     return (
-      <div>
+      <div className="grid">
         { 
           gifList.map ( item => {
             return <GifItem {...item} key={item.id}/>
