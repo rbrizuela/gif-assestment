@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    const data = await API.searchGif()
+    const data = await API.searchGif('')
 
     console.log(data)
     

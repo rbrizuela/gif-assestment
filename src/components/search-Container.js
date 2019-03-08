@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Search from './search';
+import './search-Container.css'
 
 class SearchContainer extends Component {
   
   state = {
-    value: ''
+    value: '',
   }
 
   handleSubmit = event => {
@@ -24,12 +25,14 @@ class SearchContainer extends Component {
 
   render() {
     return(   
-      <Search
-        setRef={this.setInputRef}
-        handleSubmit={this.handleSubmit}
-        handleChange={this.handleInputChange}
-        value={this.state.value}
-      />
+      <div className="container">
+        <Search
+          setRef={this.setInputRef}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleInputChange}
+          value={this.state.value}
+        />
+      </div>
       )
   }
 }

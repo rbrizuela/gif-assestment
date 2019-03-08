@@ -8,7 +8,7 @@ class GifItem extends Component {
 		return (
 			<div className='gif'>
 				<img src={this.props.images.original.url} alt="" width={260} height={160}/>
-				<h2>{this.props.id}</h2>
+				<h2>{this.props.title}</h2>
 			</div>
 		)
 	}
