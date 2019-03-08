@@ -1,7 +1,7 @@
 Proyecto de visualizacion de gif 
 
 API Utilizada de Giphy: 
-(https://developers.giphy.com/docs/)
+https://developers.giphy.com/docs/
 
 Link: 
-(https://rbrizuela.github.io/gif-assestment)
+https://rbrizuela.github.io/gif-assestment
