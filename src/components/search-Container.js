@@ -16,15 +16,15 @@ class SearchContainer extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setInputRef = this.setInputRef.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  async getData(){
+  async getData(query){
 
     
     console.log('getData (this.state.value): ', this.state.value)
 
-    const data = await API.searchGif(this.state.value)
+    const data = await API.searchGif(query)
 
     console.log('data: ', data)
     
@@ -43,16 +43,15 @@ class SearchContainer extends Component {
     this.input = element
   }
 
-  handleInputChange = event => {
+  handleChange = event => {
 
-    event.preventDefault()
     console.log('event.target.value: ', event.target.value)
 
     this.setState({
       value: event.target.value.replace(' ','-')
     })
 
-    this.getData()
+    this.getData(event.target.value)
 
   }
 
@@ -62,7 +61,7 @@ class SearchContainer extends Component {
         <Search
           setRef={this.setInputRef}
           handleSubmit={this.handleSubmit}
-          handleChange={this.handleInputChange}
+          handleChange={this.handleChange}
           value={this.state.value}
         />
         <GifGrid gifList = { this.state.gifList } />
